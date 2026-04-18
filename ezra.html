@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ezra — INK FAME tattoo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Raleway:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">INK FAME tattoo</a>
+      <ul class="nav-links">
+        <li><a href="index.html#gallery">Gallery</a></li>
+        <li><a href="index.html#artists">Artists</a></li>
+        <li><a href="index.html#reviews">Reviews</a></li>
+        <li><a href="index.html#info">Info</a></li>
+        <li><a href="index.html#contact" class="nav-cta">Book Now</a></li>
+      </ul>
+      <button class="nav-hamburger" aria-label="Menu">&#9776;</button>
+    </div>
+    <div class="nav-mobile" id="navMobile">
+      <a href="index.html#gallery" onclick="closeMobile()">Gallery</a>
+      <a href="index.html#artists" onclick="closeMobile()">Artists</a>
+      <a href="index.html#reviews" onclick="closeMobile()">Reviews</a>
+      <a href="index.html#info" onclick="closeMobile()">Info</a>
+      <a href="index.html#contact" onclick="closeMobile()">Book Now</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="artist-hero">
+    <!-- Desktop: ethereal shadow -->
+    <svg class="hero-desktop-only" style="position:absolute;width:0;height:0;overflow:hidden">
+      <defs>
+        <filter id="artistEtherealFilter" x="-20%" y="-20%" width="140%" height="140%">
+          <feTurbulence result="undulation" numOctaves="2" baseFrequency="0.0005,0.002" seed="0" type="turbulence"/>
+          <feColorMatrix id="artistEtherealHue" in="undulation" type="hueRotate" values="180"/>
+          <feColorMatrix in="dist" result="circulation" type="matrix" values="4 0 0 0 1  4 0 0 0 1  4 0 0 0 1  1 0 0 0 0"/>
+          <feDisplacementMap in="SourceGraphic" in2="circulation" scale="35" result="dist"/>
+          <feDisplacementMap in="dist" in2="undulation" scale="35" result="output"/>
+        </filter>
+      </defs>
+    </svg>
+    <div class="artist-hero-ethereal hero-desktop-only">
+      <div class="artist-hero-ethereal-inner">
+        <div class="artist-hero-shadow"></div>
+      </div>
+    </div>
+    <div class="artist-hero-content">
+      <p class="artist-hero-eyebrow">Tattoo Artist</p>
+      <h1 class="artist-hero-name">Ezra</h1>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="artist-gallery">
+    <div class="artist-gallery-inner">
+      <div class="artist-gallery-grid">
+        
+        <div class="artist-gallery-item" onclick="openLightbox('images/photo_01.jpg')"><img src="images/photo_01.jpg" alt="Tattoo" loading="lazy" /><div class="gallery-overlay"></div></div>
+        
+        <div class="artist-gallery-item" onclick="openLightbox('images/photo_02.jpg')"><img src="images/photo_02.jpg" alt="Tattoo" loading="lazy" /><div class="gallery-overlay"></div></div>
+        
+        <div class="artist-gallery-item" onclick="openLightbox('images/photo_03.jpg')"><img src="images/photo_03.jpg" alt="Tattoo" loading="lazy" /><div class="gallery-overlay"></div></div>
+        
+        <div class="artist-gallery-item" onclick="openLightbox('images/photo_04.jpg')"><img src="images/photo_04.jpg" alt="Tattoo" loading="lazy" /><div class="gallery-overlay"></div></div>
+        
+        <div class="artist-gallery-item" onclick="openLightbox('images/photo_05.jpg')"><img src="images/photo_05.jpg" alt="Tattoo" loading="lazy" /><div class="gallery-overlay"></div></div>
+        
+        <div class="artist-gallery-item" onclick="openLightbox('images/photo_06.jpg')"><img src="images/photo_06.jpg" alt="Tattoo" loading="lazy" /><div class="gallery-overlay"></div></div>
+        
+        <div class="artist-gallery-item" onclick="openLightbox('images/photo_07.jpg')"><img src="images/photo_07.jpg" alt="Tattoo" loading="lazy" /><div class="gallery-overlay"></div></div>
+        
+        <div class="artist-gallery-item" onclick="openLightbox('images/photo_08.jpg')"><img src="images/photo_08.jpg" alt="Tattoo" loading="lazy" /><div class="gallery-overlay"></div></div>
+        
+        <div class="artist-gallery-item" onclick="openLightbox('images/photo_09.jpg')"><img src="images/photo_09.jpg" alt="Tattoo" loading="lazy" /><div class="gallery-overlay"></div></div>
+        
+        <div class="artist-gallery-item" onclick="openLightbox('images/photo_10.jpg')"><img src="images/photo_10.jpg" alt="Tattoo" loading="lazy" /><div class="gallery-overlay"></div></div>
+        
+        
+        <div class="artist-gallery-item" onclick="openLightbox('images/photo_01.jpg')"><img src="images/photo_01.jpg" alt="Tattoo" loading="lazy" /><div class="gallery-overlay"></div></div>
+        
+        <div class="artist-gallery-item" onclick="openLightbox('images/photo_02.jpg')"><img src="images/photo_02.jpg" alt="Tattoo" loading="lazy" /><div class="gallery-overlay"></div></div>
+        
+        <div class="artist-gallery-item" onclick="openLightbox('images/photo_03.jpg')"><img src="images/photo_03.jpg" alt="Tattoo" loading="lazy" /><div class="gallery-overlay"></div></div>
+        
+        <div class="artist-gallery-item" onclick="openLightbox('images/photo_04.jpg')"><img src="images/photo_04.jpg" alt="Tattoo" loading="lazy" /><div class="gallery-overlay"></div></div>
+        
+        <div class="artist-gallery-item" onclick="openLightbox('images/photo_05.jpg')"><img src="images/photo_05.jpg" alt="Tattoo" loading="lazy" /><div class="gallery-overlay"></div></div>
+        
+        <div class="artist-gallery-item" onclick="openLightbox('images/photo_06.jpg')"><img src="images/photo_06.jpg" alt="Tattoo" loading="lazy" /><div class="gallery-overlay"></div></div>
+        
+        <div class="artist-gallery-item" onclick="openLightbox('images/photo_07.jpg')"><img src="images/photo_07.jpg" alt="Tattoo" loading="lazy" /><div class="gallery-overlay"></div></div>
+        
+        <div class="artist-gallery-item" onclick="openLightbox('images/photo_08.jpg')"><img src="images/photo_08.jpg" alt="Tattoo" loading="lazy" /><div class="gallery-overlay"></div></div>
+        
+        <div class="artist-gallery-item" onclick="openLightbox('images/photo_09.jpg')"><img src="images/photo_09.jpg" alt="Tattoo" loading="lazy" /><div class="gallery-overlay"></div></div>
+        
+        <div class="artist-gallery-item" onclick="openLightbox('images/photo_10.jpg')"><img src="images/photo_10.jpg" alt="Tattoo" loading="lazy" /><div class="gallery-overlay"></div></div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- LIGHTBOX -->
+  <div id="lightbox" role="dialog" aria-modal="true" aria-label="Image lightbox">
+    <button class="lightbox-close" onclick="closeLightbox()" aria-label="Close">&#215;</button>
+    <img id="lightbox-img" src="" alt="Tattoo" />
+  </div>
+
+  <!-- FOOTER -->
+  <footer id="footer">
+    <div class="fg-inner">
+      <div class="fg-grid">
+        <div class="fg-brand">
+          <p class="fg-logo">INK FAME tattoo</p>
+          <p class="fg-desc">Professional tattoo studio in the heart of Athens. Custom designs, fine-line work, and traditional styles &mdash; made to last.</p>
+        </div>
+        <div class="fg-col">
+          <h4 class="fg-title">About Us</h4>
+          <ul class="fg-links">
+            <li><a href="#">Company History</a></li>
+            <li><a href="index.html#artists">Meet the Team</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="fg-col">
+          <h4 class="fg-title">Contact Us</h4>
+          <ul class="fg-contact">
+            
+            <li><span class="fg-dot"></span><a href="tel:302130997290">21 3099 7290</a></li>
+            
+            <li><span class="fg-dot"></span><a href="https://www.google.com/maps?q=place_id:ChIJP5p-bumjoRQRdC-a77va-E0" target="_blank" rel="noopener">Eleon 18</a></li>
+          </ul>
+        </div>
+        <div class="fg-col">
+          <h4 class="fg-title">Socials</h4>
+          <div class="fg-socials">
+            
+            <a href="https://www.instagram.com/inkfame.tattooshop/" target="_blank" rel="noopener" class="fg-social-link" aria-label="Instagram">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+              <span>Instagram</span>
+            </a>
+            
+          </div>
+        </div>
+      </div>
+      <hr class="fg-divider" />
+    </div>
+    <div class="fg-text-wrap">
+      <svg id="footerHoverSvg" width="100%" height="100%" viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="ftGrad" gradientUnits="userSpaceOnUse" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#c8a96e"/>
+            <stop offset="100%" stop-color="#e8c98e"/>
+          </linearGradient>
+          <radialGradient id="ftReveal" gradientUnits="userSpaceOnUse" r="20%" cx="50%" cy="50%">
+            <stop offset="0%" stop-color="white"/>
+            <stop offset="100%" stop-color="black"/>
+          </radialGradient>
+          <mask id="ftMask"><rect x="0" y="0" width="100%" height="100%" fill="url(#ftReveal)"/></mask>
+        </defs>
+        <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" font-family="'Raleway', sans-serif" font-size="58" font-weight="700" fill="transparent" stroke="rgba(255,255,255,0.06)" stroke-width="0.4">INK FAME TATTOO</text>
+        <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" font-family="'Raleway', sans-serif" font-size="58" font-weight="700" fill="transparent" stroke="rgba(200,169,110,0.35)" stroke-width="0.4" class="ft-draw">INK FAME TATTOO</text>
+        <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" font-family="'Raleway', sans-serif" font-size="58" font-weight="700" fill="transparent" stroke="url(#ftGrad)" stroke-width="0.4" mask="url(#ftMask)">INK FAME TATTOO</text>
+      </svg>
+    </div>
+    <div class="fg-bg-glow"></div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    (function() {
+      const hueEl = document.getElementById('artistEtherealHue');
+      if (!hueEl) return;
+      let hue = 0;
+      const degreesPerMs = 360 / 5800;
+      let last = null;
+      function tick(ts) {
+        if (last !== null) {
+          hue = (hue + (ts - last) * degreesPerMs) % 360;
+          hueEl.setAttribute('values', hue.toFixed(2));
+        }
+        last = ts;
+        requestAnimationFrame(tick);
+      }
+      requestAnimationFrame(tick);
+    })();
+  </script>
+</body>
+</html>

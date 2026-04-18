@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>INK FAME tattoo — Professional Tattoo Studio</title>
+  <meta name="description" content="INK FAME tattoo — Professional tattoo studio in Athens. Rated 5/5 on Google. Eleon 18, Ilion 131 23, Greece" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Raleway:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">INK FAME tattoo</a>
+      <ul class="nav-links">
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#artists">Artists</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#info">Info</a></li>
+        <li><a href="#contact" class="nav-cta">Book Now</a></li>
+      </ul>
+      <button class="nav-hamburger" aria-label="Menu">&#9776;</button>
+    </div>
+    <div class="nav-mobile" id="navMobile">
+      <a href="#gallery" onclick="closeMobile()">Gallery</a>
+      <a href="#artists" onclick="closeMobile()">Artists</a>
+      <a href="#reviews" onclick="closeMobile()">Reviews</a>
+      <a href="#info" onclick="closeMobile()">Info</a>
+      <a href="#contact" onclick="closeMobile()">Book Now</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <!-- Desktop: ethereal shadow -->
+    <svg class="hero-desktop-only" style="position:absolute;width:0;height:0;overflow:hidden">
+      <defs>
+        <filter id="etherealFilter" x="-20%" y="-20%" width="140%" height="140%">
+          <feTurbulence result="undulation" numOctaves="2" baseFrequency="0.0005,0.002" seed="0" type="turbulence"/>
+          <feColorMatrix id="etherealHue" in="undulation" type="hueRotate" values="180"/>
+          <feColorMatrix in="dist" result="circulation" type="matrix" values="4 0 0 0 1  4 0 0 0 1  4 0 0 0 1  1 0 0 0 0"/>
+          <feDisplacementMap in="SourceGraphic" in2="circulation" scale="35" result="dist"/>
+          <feDisplacementMap in="dist" in2="undulation" scale="35" result="output"/>
+        </filter>
+      </defs>
+    </svg>
+    <div class="hero-ethereal hero-desktop-only">
+      <div class="hero-ethereal-inner">
+        <div class="hero-ethereal-shadow"></div>
+      </div>
+    </div>
+    <!-- Mobile: floating paths -->
+    <div class="hero-floating-paths hero-mobile-only">
+      <svg viewBox="0 0 390 844" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%">
+        <!-- Exponential curves: flat start bottom-left, steep curve up to top-right -->
+        <path d="M-20 844 C 150 820, 300 500, 410 200" stroke="white" stroke-width="0.8" stroke-opacity="0.35"/>
+        <path d="M-20 844 C 150 830, 300 530, 410 240" stroke="white" stroke-width="0.6" stroke-opacity="0.28"/>
+        <path d="M-20 844 C 150 810, 300 470, 410 160" stroke="white" stroke-width="0.5" stroke-opacity="0.22"/>
+        <path d="M-20 844 C 150 840, 300 560, 410 270" stroke="white" stroke-width="0.7" stroke-opacity="0.3"/>
+        <path d="M-20 844 C 150 800, 300 440, 410 130" stroke="white" stroke-width="0.4" stroke-opacity="0.18"/>
+        <path d="M-20 844 C 150 850, 300 590, 410 300" stroke="white" stroke-width="0.5" stroke-opacity="0.2"/>
+      </svg>
+    </div>
+    <div class="hero-content" id="heroContent">
+      <p class="hero-eyebrow">Athens &nbsp;&bull;&nbsp; Greece</p>
+      <h1 class="hero-title">INK FAME tattoo</h1>
+    </div>
+  </section>
+
+  <!-- ZOOM PARALLAX -->
+  <div id="zoom-parallax-wrapper">
+    <div class="zoom-parallax-sticky" id="zpSticky">
+      <!-- Each zp-layer covers the full viewport; scale is applied here from center -->
+      <!-- The inner zp-box is the positioned image, matching React's inner div positions -->
+      <div class="zp-layer" id="zpl-0"><!-- index 0: center, 25vw×25vh, scale 1→4, main photo -->
+        <div class="zp-box zp-box-0"><img src="images/photo_04.jpg" alt="Tattoo" /></div>
+      </div>
+      <div class="zp-layer" id="zpl-1"><!-- index 1: top-right wide, 35vw×30vh, scale 1→5 -->
+        <div class="zp-box zp-box-1"><img src="images/photo_02.jpg" alt="Tattoo" /></div>
+      </div>
+      <div class="zp-layer" id="zpl-2"><!-- index 2: left tall, 20vw×45vh, scale 1→6 -->
+        <div class="zp-box zp-box-2"><img src="images/photo_01.jpg" alt="Tattoo" /></div>
+      </div>
+      <div class="zp-layer" id="zpl-3"><!-- index 3: right middle, 25vw×25vh, scale 1→5 -->
+        <div class="zp-box zp-box-3"><img src="images/photo_03.jpg" alt="Tattoo" /></div>
+      </div>
+      <div class="zp-layer" id="zpl-4"><!-- index 4: bottom center, 20vw×25vh, scale 1→6 -->
+        <div class="zp-box zp-box-4"><img src="images/photo_05.jpg" alt="Tattoo" /></div>
+      </div>
+      <div class="zp-layer" id="zpl-5"><!-- index 5: bottom left wide, 30vw×25vh, scale 1→8 -->
+        <div class="zp-box zp-box-5"><img src="images/photo_06.jpg" alt="Tattoo" /></div>
+      </div>
+      <div class="zp-layer" id="zpl-6"><!-- index 6: bottom right small, 15vw×15vh, scale 1→9 -->
+        <div class="zp-box zp-box-6"><img src="images/photo_07.jpg" alt="Tattoo" /></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GALLERY -->
+  <section id="gallery">
+    <div class="gallery-inner">
+      <h2 class="section-title-wide">Gallery</h2>
+      <div class="gallery-grid">
+        
+        <div class="gallery-item" onclick="openLightbox('images/photo_01.jpg')"><img src="images/photo_01.jpg" alt="Tattoo" loading="lazy" /><div class="gallery-overlay"></div></div>
+        
+        <div class="gallery-item" onclick="openLightbox('images/photo_02.jpg')"><img src="images/photo_02.jpg" alt="Tattoo" loading="lazy" /><div class="gallery-overlay"></div></div>
+        
+        <div class="gallery-item" onclick="openLightbox('images/photo_03.jpg')"><img src="images/photo_03.jpg" alt="Tattoo" loading="lazy" /><div class="gallery-overlay"></div></div>
+        
+        <div class="gallery-item" onclick="openLightbox('images/photo_04.jpg')"><img src="images/photo_04.jpg" alt="Tattoo" loading="lazy" /><div class="gallery-overlay"></div></div>
+        
+        <div class="gallery-item" onclick="openLightbox('images/photo_05.jpg')"><img src="images/photo_05.jpg" alt="Tattoo" loading="lazy" /><div class="gallery-overlay"></div></div>
+        
+        <div class="gallery-item" onclick="openLightbox('images/photo_06.jpg')"><img src="images/photo_06.jpg" alt="Tattoo" loading="lazy" /><div class="gallery-overlay"></div></div>
+        
+        <div class="gallery-item" onclick="openLightbox('images/photo_07.jpg')"><img src="images/photo_07.jpg" alt="Tattoo" loading="lazy" /><div class="gallery-overlay"></div></div>
+        
+        <div class="gallery-item" onclick="openLightbox('images/photo_08.jpg')"><img src="images/photo_08.jpg" alt="Tattoo" loading="lazy" /><div class="gallery-overlay"></div></div>
+        
+        <div class="gallery-item" onclick="openLightbox('images/photo_09.jpg')"><img src="images/photo_09.jpg" alt="Tattoo" loading="lazy" /><div class="gallery-overlay"></div></div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- LIGHTBOX -->
+  <div id="lightbox" role="dialog" aria-modal="true" aria-label="Image lightbox">
+    <button class="lightbox-close" onclick="closeLightbox()" aria-label="Close">&#215;</button>
+    <img id="lightbox-img" src="" alt="Tattoo" />
+  </div>
+
+  <!-- ARTISTS -->
+  <section id="artists">
+    <div class="artists-inner">
+      <h2 class="section-title-wide">Artists</h2>
+      <p class="artists-subtitle">9 artists. One studio. Click to explore</p>
+      <div class="orbital-container" id="orbitalContainer"></div>
+    </div>
+  </section>
+
+  <!-- WHAT PEOPLE SAY -->
+  <section id="reviews">
+    <div class="reviews-inner">
+      <h2 class="section-title-wide">What People Say</h2>
+      <p class="reviews-subtitle">See what our clients have to say about their experience at INK FAME tattoo</p>
+      <div class="testimonials-columns">
+        <div class="testimonials-col"><div class="testimonials-track" id="tcTrack0"></div></div>
+        <div class="testimonials-col"><div class="testimonials-track" id="tcTrack1"></div></div>
+        <div class="testimonials-col"><div class="testimonials-track" id="tcTrack2"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOCATION -->
+  <section id="info">
+    <div class="location-inner">
+      <h2 class="section-title-wide">Location</h2>
+      <div class="location-map-wrap">
+        <iframe
+          src="https://www.google.com/maps?q=INK%20FAME%20tattoo,+Eleon%2018%2C%20Ilion%20131%2023%2C%20Greece&t=k&output=embed"
+          width="100%" height="460" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade" title="INK FAME tattoo location"></iframe>
+      </div>
+      <p class="location-address">Eleon 18 &nbsp;&middot;&nbsp; Athens, Greece</p>
+    </div>
+  </section>
+
+  <!-- BOOK AN APPOINTMENT -->
+  <section id="contact">
+    <div class="contact-inner">
+      <h2 class="contact-title">Book an Appointment</h2>
+      <p class="contact-sub">Ready to get your next tattoo? Reach out and let&rsquo;s talk about your idea.</p>
+      <div class="contact-buttons">
+        
+        <a href="tel:302130997290" class="btn-outline btn-call">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.8a16 16 0 0 0 5.82 5.82l.88-.88a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Call Us
+        </a>
+        
+        
+        <a href="https://instagram.com/inkfame.tattooshop" class="btn-outline btn-instagram" target="_blank" rel="noopener">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          DM on Instagram
+        </a>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="footer">
+    <div class="fg-inner">
+      <div class="fg-grid">
+        <div class="fg-brand">
+          <p class="fg-logo">INK FAME tattoo</p>
+          <p class="fg-desc">Professional tattoo studio in the heart of Athens. Custom designs, fine-line work, and traditional styles &mdash; made to last.</p>
+        </div>
+        <div class="fg-col">
+          <h4 class="fg-title">About Us</h4>
+          <ul class="fg-links">
+            <li><a href="#">Company History</a></li>
+            <li><a href="#artists">Meet the Team</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="fg-col">
+          <h4 class="fg-title">Contact Us</h4>
+          <ul class="fg-contact">
+            
+            <li><span class="fg-dot"></span><a href="tel:302130997290">21 3099 7290</a></li>
+            
+            <li><span class="fg-dot"></span><a href="https://www.google.com/maps?q=place_id:ChIJP5p-bumjoRQRdC-a77va-E0" target="_blank" rel="noopener">Eleon 18</a></li>
+          </ul>
+        </div>
+        <div class="fg-col">
+          <h4 class="fg-title">Socials</h4>
+          <div class="fg-socials">
+            
+            <a href="https://www.instagram.com/inkfame.tattooshop/" target="_blank" rel="noopener" class="fg-social-link" aria-label="Instagram">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+              <span>Instagram</span>
+            </a>
+            
+          </div>
+        </div>
+      </div>
+      <hr class="fg-divider" />
+    </div>
+    <div class="fg-text-wrap">
+      <svg id="footerHoverSvg" width="100%" height="100%" viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="ftGrad" gradientUnits="userSpaceOnUse" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#c8a96e"/>
+            <stop offset="100%" stop-color="#e8c98e"/>
+          </linearGradient>
+          <radialGradient id="ftReveal" gradientUnits="userSpaceOnUse" r="20%" cx="50%" cy="50%">
+            <stop offset="0%" stop-color="white"/>
+            <stop offset="100%" stop-color="black"/>
+          </radialGradient>
+          <mask id="ftMask"><rect x="0" y="0" width="100%" height="100%" fill="url(#ftReveal)"/></mask>
+        </defs>
+        <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" font-family="'Raleway', sans-serif" font-size="58" font-weight="700" fill="transparent" stroke="rgba(255,255,255,0.06)" stroke-width="0.4">INK FAME TATTOO</text>
+        <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" font-family="'Raleway', sans-serif" font-size="58" font-weight="700" fill="transparent" stroke="rgba(200,169,110,0.35)" stroke-width="0.4" class="ft-draw">INK FAME TATTOO</text>
+        <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" font-family="'Raleway', sans-serif" font-size="58" font-weight="700" fill="transparent" stroke="url(#ftGrad)" stroke-width="0.4" mask="url(#ftMask)">INK FAME TATTOO</text>
+      </svg>
+    </div>
+    <div class="fg-bg-glow"></div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
