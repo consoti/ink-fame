@@ -1153,3 +1153,7 @@ img { display: block; max-width: 100%; height: auto; }
   .fg-socials { align-items: center; }
   .fg-social-link { justify-content: center; }
 }
+
+@media (max-width: 600px) {
+  #footerHoverSvg text { font-size: 32px; }
+}
